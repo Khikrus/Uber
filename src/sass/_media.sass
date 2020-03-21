@@ -45,6 +45,9 @@
 			align-items: center
 		&_descr 
 			margin-top: 20px
+	.choice
+		&_img
+			width: 100%
 
 @media (max-width: 768px)
 	.menu
@@ -68,3 +71,30 @@
 			margin: 10px 0
 		&_link
 			font-size: 20px
+	.hamburger
+		display: block
+		position: absolute
+		right: 10px
+		top: 50%
+		transform: translateY(-50%)
+		width: 25px
+		height: 15px
+		span
+			display: block
+			height: 2px
+			width: 100%
+			background-color: #fff
+			margin-top: 3px
+			transition: 0.5s all
+		&_active
+			transform: translateY(-2px)
+			span
+				margin-bottom: -4px
+				&:first-child
+					transform: translateY(2px) rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:last-child
+					transform: translateY(2px) rotate(45deg)
+
+					
