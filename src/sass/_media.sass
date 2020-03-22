@@ -16,6 +16,10 @@
 			align-items: flex-start
 		&_descr 
 			width: 300px
+	.mobile
+		&_item
+			width: 300px
+
 @media (max-width: 991px)
 	.menu
 		&_item
@@ -43,13 +47,19 @@
 		&_block
 			flex-direction: column
 			align-items: center
+		&_round
+			margin-right: 0
 		&_descr 
 			margin-top: 20px
+
 	.choice
 		&_img
 			width: 100%
+	.footer_wrapper
+		flex-direction: column
 
-@media (max-width: 768px)
+
+@media (max-width: 767px)
 	.menu
 		position: fixed
 		flex-direction: column
@@ -61,7 +71,7 @@
 		width: 50%
 		height: 100vh
 		padding: 20px 15px
-		background-color: rgba(0, 0, 0, .8)
+		background-color: rgba(0, 0, 0, .9)
 		transition: 0.6s all
 		&_active
 			left: 0
@@ -71,6 +81,7 @@
 			margin: 10px 0
 		&_link
 			font-size: 20px
+			font-weight: 400
 	.hamburger
 		display: block
 		position: absolute
@@ -96,5 +107,93 @@
 					display: none
 				&:last-child
 					transform: translateY(2px) rotate(45deg)
+	.xs-hidden
+		display: none
+	.xs-visible
+		display: block
+	.subheader
+		&_phone
+			display: block
+			margin-top: 12px
+			color: #ffffff
+			font-size: 16px
+			font-weight: 400
+			text-transform: uppercase
+			text-align: center
+		&_btn
+			display: block
+			width: 180px
+			height: 40px
+			margin: 0 auto
+			margin-top: 10px
+	.promo
+		&_header
+			line-height: 45px
 
-					
+@media (max-width: 575px)
+	nav
+		height: 30px
+	header
+		height: 30px
+	.subheader
+		height: 60px
+		top: 30px
+		&_official
+			display: none
+		&_logo
+			margin-top: 16px
+		&_phone
+			font-size: 12px
+			font-weight: 400
+			text-transform: uppercase
+			margin-top: 11px
+		&_btn
+			width: 110px
+			height: 22px
+			font-size: 10px
+			margin-top: 7px
+			&:hover
+				background-image: linear-gradient(to top, $main-color 0%, #4ce2ff 100%)
+	.promo
+		min-height: 400px
+		padding: 93px 0 35px 0
+		&_descr
+			display: none
+		&_header
+			padding: 0 24px
+			font-size: 30px
+			line-height: 35px
+		&_subheader
+			padding: 0 10px 
+			margin-top: 33px
+			font-size: 20px
+			line-height: 25px
+		&_btn
+			width: 210px
+			height: 50px
+			margin-top: 72px
+			font-size: 16px
+			&:hover
+				background-image: linear-gradient(to top, $main-color 0%, #4ce2ff 100%)
+	.menu
+		width: 100%
+		&_item
+			width: 100%
+			text-align: center
+			padding: 3px 0
+		&_link
+			display: block
+	.reasons
+		padding: 22px 0 36px 0
+		&_block
+			margin-top: 26px
+		&_round
+			width: 100px
+			height: 100px
+		&_descr
+			width: 100%
+			margin-top: 27px
+	.title
+		font-size: 16px
+		margin-top: 15px
+		line-height: 16px
